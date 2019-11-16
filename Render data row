@@ -1,0 +1,11 @@
+html: 
+<table id="gridview" sourceapi="/Home/GetData"><tr foreach="rows"><td>${$index+1}</td><td>${title}</td></tr></table> 
+
+javascript: 
+$('#gridview').gridlist({
+    url: '', //这里优先级大于sourceapi属性
+    data: null,
+    rowData: function (rowData, rowIndex, dataStore) { },
+    rowElement: function (rowHtml, rowIndex, dataStore) { },
+    complete: function (dataStore) { }
+});
